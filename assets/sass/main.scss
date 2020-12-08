@@ -1,0 +1,836 @@
+:root{
+    --white-color:#FDFDFD;
+    --black-color:#515050;
+    --main-color:#ff2b4a;
+    --secondary-color:#eee;
+    --h-font:'Raleway', sans-serif;
+    --p-font:'Roboto', sans-serif;
+}
+
+*:hover,
+*:focus,
+*:active{
+    outline: none;
+    text-decoration: none !important;
+}
+
+
+html{
+    font-size: 62.5%;//10px
+    scroll-behavior: smooth;
+}
+body{
+    font-family: var(--p-font);
+}
+h1,h2,h3,h4,h5,h6{
+    margin: 0;
+    font-family: var(--h-font);
+}
+
+/*
+============================
+  HERO AREA STARTS
+============================
+*/
+#hero-area{
+  width: 100%;
+  height: 100vh;
+  max-height: 100vh;
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),url(../img/hero-bg-2.jpg) no-repeat top center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+
+
+  // border: 1px solid red;
+
+ 
+  .main-nav{
+    // border: 1px solid var(--white-color);
+    padding: 1.5rem 0;
+    margin: 1rem 0 0 0;
+    position: relative;
+    z-index:3;
+
+    &.uk-active{
+      background-color: rgba(0,0,0,.9);
+    }
+    & > .container{
+      // border: 1px solid red;
+      display: flex;
+    }
+    .nav-logo{
+      margin: auto auto auto 0;
+      // border: 1px solid #000;
+      img{
+        width: 3.5rem;
+      }
+    }
+    .nav-toggle-btn{
+      margin: auto 0 auto auto;
+      font-size: 3rem;
+      padding:.5rem 1rem;
+      border: none;
+      color: var(--white-color);
+      border: .25rem solid var(--white-color);
+      background-color: transparent;
+      border-radius: .25rem;
+    }
+    .nav-links{
+      width: 100%;
+      height: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0,0,0,.9);
+      z-index: 1000;
+      display:none;
+      .nav-close-btn{
+        //border:1px solid red;
+        margin-top: 1.5rem;
+        button{
+          margin: 0 0 0 auto;
+          font-size: 3rem;
+          padding:.5rem 1rem;
+          border: none;
+          color: var(--white-color);
+          border: .2rem solid var(--white-color);
+          background-color: transparent;
+          border-radius: .25rem;
+        }
+      }
+
+      .nav-links-wrapper{
+        //border:1px solid red;
+        margin-top: 1.5rem;
+        ul{
+          margin: 0 auto;
+          padding:0;
+          list-style:none;
+          li{
+            // border:1px solid red;
+            text-align:center;
+            margin: 0 0 .8rem 0;
+
+            a{
+              display:inline-block;
+              font-size:2rem;
+              font-weight:500;
+              text-transform:uppercase;
+              color:var(--white-color);
+              padding:1rem;
+              &:hover{
+                color:var(--main-color);
+              }
+
+            }
+          }
+        }
+
+      }
+    }
+  }
+  .hero-wrapper{
+    // border: 1px solid black;
+    position: relative;
+    z-index:2;
+    margin: auto 0;
+    .hero-heading{
+      // border: 1px solid black;
+    
+      h1{
+        text-align: center;
+        font-size: 6rem;
+        font-weight: 800;
+        color: var(--white-color);
+        text-transform: uppercase;
+        letter-spacing: .1rem;
+        position: relative;
+        padding: .5rem;
+        // border: 1px solid black;
+        &::after,
+        &::before{
+          content: "";
+          width: 100%;
+          height: .3rem;
+          background-color: var(--white-color);
+          position: absolute;
+          left: 0;
+          right: 0;
+        }
+        &::after{
+          top:0;
+          margin: 0 0 0 0;
+        }
+
+        &::before{
+          bottom:0;
+        
+        }
+       
+      }
+      p{
+        font-size: 2rem;
+        font-weight: 400;
+        text-align: center;
+        color: var(--white-color);
+        letter-spacing: .1;
+      }
+
+    }
+
+  }
+  canvas{
+    position: absolute;
+    z-index:1;
+  }
+}
+
+/*
+============================
+  HERO AREA ENDS
+============================
+*/
+
+/*
+============================
+  ABOUT ME STATS
+============================
+*/
+#about-me{
+  padding:7rem 0;
+  // border:1px solid black;
+
+  .about-me-img{
+    //border:1px solid black;
+    img{
+      width: 30rem;
+      height: auto;
+      display: block;
+      margin: auto;
+      //border:1px solid black
+    }
+    // border:1px solid black
+  }
+  .about-me-info{
+    //border:1px solid black;
+    display: flex;
+    flex-direction: column;
+   
+    .about-me-name{
+      // border:1px solid black;
+      margin-top: auto;
+      margin-bottom: 1rem;
+      h2{
+        font-size:2.5rem;
+        font-weight:700;
+        color: var(--black-color);
+        // border:1px solid black;
+      }
+      
+    }
+    .about-me-desc{
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      // border:1px solid black;
+      P{
+        font-size: 1.8rem;
+        font-weight: 400;
+        color: var(--black-color);
+        &:nth-child(1){
+          margin:0 0 2rem 0;
+
+        }
+        &:nth-child(2){
+          margin:2rem 0 0 0;
+
+        }
+      }
+
+    }
+    .hire-me-btn{
+      margin-top: 1rem;
+      margin-bottom: auto;
+      // border: 1px solid black;
+      button{
+        border:.25rem solid transparent;
+        background-color:var(--main-color);
+        font-size: 1.8rem;
+        font-weight: 400;
+        text-transform: uppercase;
+        letter-spacing: .05rem;
+        padding: 1rem 5rem;
+        color: var(--white-color);
+        border-radius: .25rem;
+        transition: all 150ms ease-in-out;
+        &:hover,
+        &:focus{
+          background-color: transparent;
+          color: var(--main-color);
+          border:.25rem solid var(--main-color);
+        }
+      }
+    }
+  }
+}
+/*
+============================
+ABOUT ME ENDS
+============================
+*/
+
+
+
+
+/*
+============================
+WORKING PROCESS STARTS
+============================
+*/
+#working-process{
+  background-color: #eee;
+  padding: 7rem 0;
+  .working-process-heading{
+  //  border: 1px solid black;
+    margin-bottom: 3.5rem;
+    h2{
+      font-size: 4rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .05rem;
+      color: var(--black-color);
+      text-align: center;
+      margin: 0 0 1rem 0;
+    }
+    p{
+      font-size:1.8rem;
+      font-weight: 400;
+      letter-spacing: .05rem;
+      color:var(--black-color);
+      text-align: center;
+      margin: 0;
+    }
+
+  }
+  .working-process{
+    // border: 1px solid black;
+    margin-top: 3.5rem;
+
+  }
+
+  .process{
+    //border: 1px solid black;
+    .wrapper{
+      width: 100%;
+      height: 25rem;
+      margin: 0 auto;
+      // border: 1px solid black;
+      display: flex;
+      & > div{
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        color:var(--white-color);
+        i{
+          font-size: 3.5rem;
+         
+          margin: 0 auto;
+        }
+        strong{
+          font-size: 2rem;
+          font-weight: 500;
+          text-transform: uppercase;
+          letter-spacing: .05rem;
+          margin: 2rem 0 0 0;
+        }
+      }
+
+    }
+    &.design{
+      .wrapper{
+        background-color: #10c6fc;
+      }
+    }
+    &.dev{
+      .wrapper{
+        background-color: #835aeb;
+      }
+    }
+    &.testing{
+      .wrapper{
+        background-color: #002453;
+      }
+    }
+    &.launch{
+      .wrapper{
+        background-color: #ff2b4a;
+      }
+    }
+  }
+
+}
+
+/*
+============================
+WORKING PROCESS ENDS
+============================
+*/
+
+
+
+/*
+============================
+EXPERENCE AND EDUCATION STARTS
+============================
+*/
+#experience-education{
+  padding: 7rem 0;
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),url(../img/experience-education-bg.jpg) no-repeat center center;
+  background-size: cover;
+  // experience-education-bg.jpg
+
+  .experiences,
+  .educations{
+    //border: 1px solid red;
+    .col-content-wrapper{
+     background-color: rgba(55, 55, 55, 0.52);
+     padding: 4rem 15px;
+     //border:1px solid red;
+  
+    }
+    .col-heading{
+      // border: 1px solid blue;
+      margin-bottom:2rem;
+
+      h3{
+        font-size: 2.5rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: .05rem;
+        color: var(--white-color);
+      }
+    }
+    .company{
+      //border: 1px solid red;
+      margin-bottom: 3rem;
+      .wrapper{
+        padding:1rem 0 2rem 0;
+        border-bottom: .2rem solid var(--white-color);
+
+      }
+      h4{
+        font-size:1.8rem ;
+        font-weight: 600;
+        text-transform: capitalize;
+        letter-spacing: .05rem;
+        color: var(--white-color);
+        margin:0 0 1rem 0;
+      }
+      span{
+        font-size:1.4rem ;
+        font-weight: 400;
+        letter-spacing: .05rem;
+        color: #ebebf2;
+
+      }
+      p{
+        font-size:1.6rem ;
+        font-weight: 400;
+        letter-spacing: .05rem;
+        color: #bcbcc5;
+        margin:1.5rem 0 0 0; 
+      }
+    }
+
+  }
+}
+/*
+============================
+EXPERENCE AND EDUCATION ENDS
+============================
+*/
+
+/*
+============================
+MY LATEST WORK STARTS
+============================
+*/
+#my-work{
+  padding: 7rem 0;
+  // border: 1px solid black;
+  
+  .my-work-heading{
+    // border: 1px solid black;
+    margin-bottom: 2rem;
+    h2{
+      font-size:4rem;
+      font-weight: 700;
+      text-transform:uppercase;
+      letter-spacing: .05rem;
+      color: var(--black-color);
+      text-align:center;
+      margin:0;
+    }
+    p{
+      font-size:1.8rem;
+      font-weight:400;
+      letter-spacing:.05rem;
+      color:var(--black-color);
+      margin:0;
+      text-align:center;
+    }
+
+  }
+  .categories{
+    // border: 1px solid black;
+    .wrapper{
+      display: flex;
+      // border: 1px solid black;
+      button{
+        border:none;
+        font-size: 1.5rem;
+        font-weight: 500;
+        text-transform:uppercase;
+        letter-spacing:.05rem;
+        color: var(--main-color);
+        border:.2rem solid var(--main-color);
+        padding:.5rem 1rem;
+        margin: .8rem;
+        background-color:transparent;
+        transition: all 150ms ease-in-out;
+        &:hover,
+        &.mixitup-control-active{
+          color:var(--white-color);
+          background-color: var(--main-color);
+        }
+      }
+    }
+  }
+
+  .works{
+    margin-top: 2rem;
+    .work{
+      margin-bottom: 1.5rem;
+      a{
+        width: 100%;
+        display: inline-block;
+        border: .2rem solid #f4f4f4;
+        img{
+          width:100%;
+          height:auto;
+          display:block;
+        }
+      }
+      
+    }
+  }
+}
+.uk-lightbox-toolbar{
+  font-size:2.2rem;
+}
+/*
+============================
+MY LATEST WORK ENDS
+============================
+*/
+
+/*
+============================
+TESTIMONIAL STATS
+============================
+*/
+#testimonials{
+  padding: 7rem 0;
+  background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)),url(../img/testimonial-bg.jpg) no-repeat top center;
+  background-size: cover;
+  // border: 1px solid black; 
+  .testimonial-wrapper{
+    
+    //border: 1px solid black;
+    .quate{
+      width: 5rem;
+      height: auto;
+      display: block;
+      margin:0 0 3rem 0;
+      //border: 1px solid black;
+    }
+    p{
+      font-size: 1.6rem;
+      font-weight: 400;
+      letter-spacing: .05rem;
+      color: var(--black-color);
+      margin: 0 0 4rem 0;
+    }
+    .signature{
+      width: 15rem;
+      height: auto;
+      display: block;
+      //border: 1px solid black;
+    }
+    strong{
+      font-size: 1.6rem;
+      font-weight:700;
+      color: var(--black-color);
+      display: block;
+      letter-spacing: .05rem;
+      //border: 1px solid black;
+    }
+    span{
+      font-size: 1.4rem;
+      font-weight: 400;
+      text-transform: capitalize;
+      color:var(--black-color);
+      letter-spacing: .05rem;
+    }
+  }
+}
+/*
+============================
+TESTIMONIAL ENDS
+============================
+*/
+
+/*
+============================
+CONTACT STARTS
+============================
+*/
+
+#contact{
+  padding: 7rem 0;
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),url(../img/contact-bg.jpg) no-repeat top center;
+  background-size:cover;
+  background-attachment: fixed;
+    .contact-form-col,
+    .contact-info-col{
+      .wrapper{
+        // border:1px solid red; 
+        padding: 0 15px;
+        height:100%;
+        .row{
+          height: 100%;
+        }
+      }
+    }
+
+    .contact-form-col{
+      .wrapper{
+        padding-top: 2.5rem;
+        padding-bottom: 2.5rem;
+        background-color:rgba(0,0,0,0.7) ;
+
+      }
+      .contact-form-heading{
+        // border: 1px solid red;
+        margin-bottom: 1rem;
+
+        h2{
+          font-size:2.5rem;
+          font-weight: 600;
+          color:var(--white-color);
+          text-transform:uppercase;
+        }
+      }
+      .contact-form{
+        margin-top: 1rem;
+        // border: 1px solid red;
+          .name,
+          .email,
+          .subject,
+          .message,
+          .send{
+            //border: 1px solid black;
+            margin-bottom: 3rem;
+
+          }
+          .name,
+          .email,
+          .subject,
+          .message{
+          
+            input,
+            textarea{
+              width: 100%;
+              padding: 1.5rem 1rem;
+              font-size: 1.8rem;
+              background: transparent;
+              color: #bcbec6;
+              border:.2rem solid var(--white-color);
+              border-radius: .25rem;
+            }
+          }
+          .send{
+            button{
+              border: .2rem solid transparent;
+              background-color: var(--main-color);
+              color:var(--white-color);
+              font-size: 1.8rem;
+              font-weight: 400;
+              text-transform:uppercase;
+              padding: 1rem 5rem;
+              margin: 0 0 0 auto;
+              letter-spacing: .05rem;
+              border-radius: .25rem;
+              transition: all 150ms ease-in-out;
+              &:hover,
+              &:focus{
+                background-color: transparent;
+                color: var(--main-color);
+                border: .2rem solid var(--main-color);
+              }
+            }
+          }
+      }
+    }
+    .contact-info-col{
+      .contact{
+    
+        background-color:rgba(0,0,0,0.7) ;
+        // border: 1px solid #FDFDFD;
+        padding-top:2.5rem;
+        padding-bottom:2.5rem;
+        h3{
+          // border: 1px solid #FDFDFD;
+          font-size:2.5rem;
+          font-weight: 600;
+          text-transform:uppercase;
+          color: var(--white-color);
+          letter-spacing:.05rem;
+          margin: 0 0 1.5rem 0;
+        } 
+        P{
+          font-size:1.8rem;
+          font-weight: 400;
+          letter-spacing: .05rem;
+          color: #bcbec6;
+
+        }
+      }
+    }
+}
+
+/*
+============================
+CONTACT STARTS
+============================
+*/
+
+/*
+============================
+FOOTER STARTS
+============================
+*/
+#footer-area{
+  padding:2rem 0;
+  background-color: rgba(0,0,0,.9);
+
+  .social-links{
+    ul{
+      margin:0 auto;
+      padding:0;
+      list-style: none;
+      display: flex;
+      li{
+        a{
+          display: inline-block;
+          font-size:1.8rem;
+          font-weight: 400;
+          text-align: center;
+          color:var(--white-color);
+          padding:1rem;
+          transition: all 150ms ease-in-out;
+          &:hover{
+            color:var(--main-color);
+          }
+        }
+      }
+    }
+    p{
+      font-size:1.5rem;
+
+      // border:1px solid #fff;
+      text-align:center;
+      color: var(--white-color);
+      a{
+        color: var(--main-color);
+      }
+    }
+    .to-top{
+      // border: 1px solid red;
+      a{
+        width:35px;
+        height: 35px;
+        border-radius:50%;
+        border: .2rem solid var(--main-color);
+        margin: 0 auto;
+        position: relative;
+        transition: all 150ms ease-in-out;
+        &::after{
+          content: "\f062";
+          font-size: 1.6rem;
+          font-family: 'fontawesome';
+          color: var(--white-color);
+          position: absolute;
+          top:0;
+          bottom:0;
+          right:0;
+          left:0;
+          margin:auto;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        &:hover::after{
+          color: var(--main-color);
+          
+        }
+        svg{
+          display: none;
+        }
+       
+      }
+    }
+  }
+}
+/*
+============================
+FOOTER ENDS
+============================
+*/
+
+
+
+
+//it will start working at 992px-1199px
+@media screen and(max-width:1199px){
+    html{
+      font-size: 56.25%;//9px
+    }
+  }
+  
+//it will start working at 768px-991px
+@media screen and(max-width:991px){
+    html{
+      font-size: 50%;//8px
+    }
+    
+  
+  }
+//it will start working at 576px-767px
+@media screen and(max-width:767px){
+    html{
+      font-size: 43.75%;//7px
+    }
+
+}
+   
+//it will start working at 50px-575px
+@media screen and(max-width:575px){
+  html{
+      font-size: 37.5%;//6px
+  }
+
+
+}
